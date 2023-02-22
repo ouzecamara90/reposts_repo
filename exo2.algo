@@ -1,0 +1,82 @@
+ALGORITHME produit_scalaire
+// Déclaration des variables
+VARIABLES
+    n, i, j : ENTIER
+    v1, v2 : TAB[1..100] FLOAT
+    ps : FLOAT
+    
+// Lecture du nombre de paires de vecteurs
+     Write("Entrez le nombre de paires de vecteurs")
+    READ n
+
+// Boucle pour chaque paire de vecteurs
+FOR i FROM 1 TO n DO
+    // Lecture des vecteurs v1 et v2
+    Write  ("Entrez les valeurs du vecteur v1")
+    FOR j FROM 1  TO 100 DO
+        READ v1[j];
+        IF v1[j] = 0 THEN
+            BREAK
+        END_IF
+    END_FOR
+    
+    Write("Entrez les valeurs du vecteur v2")
+    FOR j FROM 1 TO 100 DO
+        READ v2[j];
+        IF v2[j] = 0 THEN
+            BREAK
+        END_IF
+    END_FOR
+    
+    // Appel de la procédure dot_product pour calculer le produit scalaire
+    dot_product(v1, v2, ps)
+    
+    // Vérification si les vecteurs sont orthogonaux
+    IF ps = 0 THEN
+        Write("Les vecteurs sont orthogonaux")
+    ELSE
+        READ ("Les vecteurs ne sont pas orthogonaux")
+    END_IF
+    
+
+
+// Procédure pour calculer le produit scalaire
+PROCEDURE dot_product(v1 : TAB[1..100] FLOAT, v2 : TAB[1..100] FLOAT, ps : FLOAT)
+VARIABLES
+    i : INTEGER
+BEGIN
+    ps <- 0
+    FOR i FROM 1 TO DO
+        ps <- ps + v1[i] * v2[i]
+    END_FOR
+END_PROCEDURE
+ALGORITHM produt_scalaire
+VAR
+    n, i, j : integer
+    v1, v2 : TAB[1..100]  FLOAT
+BEGIN
+    write ("Entrez le nombre de paires de vecteurs")
+    READ n
+
+FOR i FROM 1 TO n DO
+    write("Entrez les valeurs du vecteur v1")
+    FOR j FROM 1 TO 100 DO
+        READ v1[j];
+        IF v1[j] = 0 THEN
+            BREAK
+        END_IF
+    END_FOR
+    
+    Write ("Entrez les valeurs du vecteur v2")
+    FOR j FROM 1 TO 100 DO
+        READ v2[j];
+        IF v2[j] = 0  THEN
+            BREAK
+        END_IF
+    END_FOR
+    
+    // Appel de la fonction dot_product pour calculer le produit scalaire
+    IF dot_product(v1, v2) = 0 THEN
+        Write ("Les vecteurs sont orthogonaux")
+    ELSE
+        Write ("Les vecteurs ne sont pas")

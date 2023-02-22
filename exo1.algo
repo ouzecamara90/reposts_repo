@@ -1,0 +1,53 @@
+ALGORITHM somme.algo
+VAR
+    tab1,tab2 : ARRAY_OF type[50];
+    i,n,eldis,elpre : INTEGER; 
+    som := INTEGER = 0;
+BEGIN
+    FOR i=1 TO n DO
+        READ tab1[i];
+    END_FOR
+     Write("give the element to insert");
+     READ(eldis);
+  
+    FOR (i < tab2.length; i++) DO
+       IF ((tab2[i])=eldis)THEN
+            BREAK
+       END_IF 
+     
+    END_FOR
+  
+  // Parcourir les éléments de l'ensemble 2 et ajouter les éléments distincts au tableau
+    FOR i=1 TO n DO
+         READ tab2[i];
+    END_FOR
+        Write("give the element to insert");
+        READ(eldis);
+   FOR (i< tab2.length; i++) DO
+     IF ((tab2[i])=eldis)THEN
+      BREAK
+     END_IF
+     
+  END_FOR
+  // Calculer la somme des éléments distincts
+      FOR (i=1 TO n) DO
+        IF((tab1[i]+tab2[i])=eldis)THEN
+         return someeldis;
+         END_IF
+      END_FOR
+  
+// somme de tout les elements
+ Write("somme the element");
+     READ(elpre);
+     FOR (i=1 TO n) DO
+     const jeu1 = [3, 1, 7, 9];
+     const jeu2 = [2, 4, 1, 9, 3];
+
+        IF((jeu1+jeu2)=elpre)THEN
+          return somelpre;
+        END_IF
+      END_FOR
+     console.log(resultat); // Output: 13
+END
+
+
